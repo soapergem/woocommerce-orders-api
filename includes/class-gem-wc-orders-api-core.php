@@ -37,8 +37,8 @@ class GEM_WC_Orders_Api_Core {
 	function register_routes() {
 		error_log( 'GEM_WC_Orders_Api_Core::rest_api_init hook fired' );
 		register_rest_route( 'wc-orders-api/v1', '/orders', array(
-			'methods'				=> 'GET',
-			'callback'				=> array( $this, 'handle_request' ),
+			'methods'		=> 'GET',
+			'callback'		=> array( $this, 'handle_request' ),
 			'permission_callback'	=> array( $this, 'authenticate_user' )
 		) );
 	}
