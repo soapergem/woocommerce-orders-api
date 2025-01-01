@@ -98,7 +98,6 @@ class GEM_WC_Orders_Api_Core {
 	 * @since   0.1.0
 	 */
 	function map_order( $order ) {
-		https://plantroom.art/wp-admin/post.php?post=363&action=edit
 		return array(
 			'number'		=> intval($order->get_order_number()),
 			'url'			=> admin_url('post.php?post=' . $order->get_order_number() . '&action=edit'),
