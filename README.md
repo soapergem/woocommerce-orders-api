@@ -4,7 +4,12 @@ This WordPress plugin adds a simple API endpoint to allow you to retrieve recent
 
 ## Installation
 
-Install the plugin!
+Go to the [Releases] and find the most recent plugin.zip file. Unzip the contents and copy the folder
+contained therein (named `woocommerce-orders-api`) into your `wp-content/plugins/` directory. Finally,
+be sure to go into the Plugins page in your Administrative interface and activate the plugin.
+
+In the future I may try and publish this on wordpress.org to make things easier. However at the time
+I'm writing this, their plugin submission queue is currently closed.
 
 ## Usage
 
@@ -41,4 +46,5 @@ Doing so would retrieve up to 10 orders that came in after January 15, 2025. The
 ordered by showing the most recent order first.
 
 
+[Releases]: https://github.com/soapergem/woocommerce-orders-api/releases
 [Application Password]: https://make.wordpress.org/core/2020/11/05/application-passwords-integration-guide/
