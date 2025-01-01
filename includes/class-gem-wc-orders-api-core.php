@@ -80,7 +80,7 @@ class GEM_WC_Orders_Api_Core {
 		}
 
 		$user = wp_get_current_user();
-		if ( ! user_can($user, 'read') ) {
+		if ( ! user_can($user, 'administrator') && ! user_can($user, 'read_shop_order') ) {
 			return new WP_Error(
 				'rest_forbidden',
 				__( 'You do not have permission to access this endpoint.', 'wc-orders-api' ),
