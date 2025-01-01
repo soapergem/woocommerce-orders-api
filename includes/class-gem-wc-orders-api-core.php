@@ -99,15 +99,15 @@ class GEM_WC_Orders_Api_Core {
 	 */
 	function map_order( $order ) {
 		return array(
-			'number'		=> intval($order->get_order_number()),
-			'url'			=> admin_url('post.php?post=' . $order->get_order_number() . '&action=edit'),
-			'date'			=> ( ( $date = $order->get_date_created() ) ? $date->date_i18n( 'c' ) : '' ),
-			'total'			=> floatval($order->get_total()),
-			'status'		=> wc_get_order_status_name( $order->get_status() ),
+			'number'	=> intval($order->get_order_number()),
+			'url'		=> admin_url('post.php?post=' . $order->get_order_number() . '&action=edit'),
+			'date'		=> ( ( $date = $order->get_date_created() ) ? $date->date_i18n( 'c' ) : '' ),
+			'total'		=> floatval($order->get_total()),
+			'status'	=> wc_get_order_status_name( $order->get_status() ),
 			'first_name'	=> $order->get_billing_first_name(),
-			'last_name'		=> $order->get_billing_last_name(),
-			'state'			=> $order->get_shipping_state(),
-			'postcode'		=> $order->get_shipping_postcode(),
+			'last_name'	=> $order->get_billing_last_name(),
+			'state'		=> $order->get_shipping_state(),
+			'postcode'	=> $order->get_shipping_postcode(),
 			'item_count'	=> $order->get_item_count(),
 		);
 	}
